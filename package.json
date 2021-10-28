@@ -1,0 +1,20 @@
+{
+  "name": "servidorMERNtask",
+  "version": "1.0.0",
+  "description": "Servidor REST para proyecto de administracion de tareas ",
+  "main": "index.js",
+  "author": "Patricio Fajardo",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  }
+}
