@@ -1,5 +1,15 @@
+import Proyecto from "../models/Proyecto.js";
+
 const crearProyecto = async (req, res) => {
-  res.send("ok");
+  try {
+    //   crear un nuevo    proyecto
+    const proyecto = new Proyecto(req.body);
+    proyecto.save();
+    res.json(proyecto);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Hubo un error en crear un proyecto");
+  }
 };
 
 export default crearProyecto;
