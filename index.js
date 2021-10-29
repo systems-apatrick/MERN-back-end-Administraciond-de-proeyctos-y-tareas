@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import conectaDB from "./config/db.js";
 import usuarios from "./routes/usuarios.js";
 import auth from "./routes/auth.js";
@@ -9,6 +10,9 @@ import tareas from "./routes/tareas.js";
 const app = express();
 // conectar la base datos
 conectaDB();
+
+// habilitar cors
+app.use(cors());
 
 // habilitar exppress.json
 app.use(express.json({ extended: true }));
