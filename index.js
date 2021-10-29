@@ -3,6 +3,7 @@ import conectaDB from "./config/db.js";
 import usuarios from "./routes/usuarios.js";
 import auth from "./routes/auth.js";
 import proyectos from "./routes/proyectos.js";
+import tareas from "./routes/tareas.js";
 
 // crear el servidor
 const app = express();
@@ -23,6 +24,7 @@ app.get("/", (req, res) => {
 app.use("/api/usuarios", usuarios);
 app.use("/api/auth", auth);
 app.use("/api/proyectos", proyectos);
+app.use("/api/tareas", tareas);
 
 // arrancar la app del servidor
 app.listen(PORT, () => {
