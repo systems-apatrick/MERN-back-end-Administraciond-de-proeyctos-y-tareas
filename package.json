@@ -1,6 +1,7 @@
 {
   "name": "servidorMERNtask",
   "version": "1.0.0",
+  "type": "module",
   "description": "Servidor REST para proyecto de administracion de tareas ",
   "main": "index.js",
   "author": "Patricio Fajardo",
@@ -13,8 +14,12 @@
     "dev": "nodemon ."
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-validation": "^3.0.8",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.12"
   }
 }
