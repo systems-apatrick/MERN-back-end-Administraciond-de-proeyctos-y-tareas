@@ -54,4 +54,17 @@ const autenticarUser = async (req, res) => {
     // res.status(40).send("Hubo un error");
   }
 };
-export default autenticarUser;
+
+// obtiene que usuario esta autenticado
+const usuarioAutenticado = async (req, res) => {
+  try {
+    const usuario = await Usuario.findById(req.usuario.id);
+    res.json({ usuario });
+  } catch (error) {
+    console.log(error);
+    res
+      .status(500)
+      .json({ msg: "Hubo un error al obtener usuario autenticado" });
+  }
+};
+export { autenticarUser, usuarioAutenticado };
