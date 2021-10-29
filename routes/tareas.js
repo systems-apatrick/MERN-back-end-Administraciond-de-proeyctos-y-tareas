@@ -1,6 +1,6 @@
 import express from "express";
 import { check } from "express-validator";
-import { crearTarea } from "../controllers/tareaController.js";
+import { crearTarea, obtenerTareas } from "../controllers/tareaController.js";
 import authMiddleware from "../moddelware/authMiddleware.js";
 
 const router = express.Router();
@@ -18,4 +18,8 @@ router.post(
   ],
   crearTarea
 );
+
+// obtener tareas de un proyecto
+// api/tareas
+router.get("/", authMiddleware, obtenerTareas);
 export default router;
