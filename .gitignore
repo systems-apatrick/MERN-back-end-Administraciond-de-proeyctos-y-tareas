@@ -14,7 +14,7 @@ package-lock.json
 *.log
 *.gz
 .env
-# variables.env
+variables.env
 
 
 # Coveralls
